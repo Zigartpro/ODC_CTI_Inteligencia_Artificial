@@ -112,3 +112,4 @@ astro dev --background
 Gestionar el servidor con `astro dev stop`, `astro dev status`, y `astro dev logs`.
 
 Documentación: https://docs.astro.build — guías relevantes: [rutas/páginas](https://docs.astro.build/en/guides/routing/), [componentes Astro](https://docs.astro.build/en/basics/astro-components/), [componentes React](https://docs.astro.build/en/guides/framework-components/), [content collections](https://docs.astro.build/en/guides/content-collections/), [estilos/Tailwind](https://docs.astro.build/en/guides/styling/).
+
