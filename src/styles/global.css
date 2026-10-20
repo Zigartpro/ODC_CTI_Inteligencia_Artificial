@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Controles nativos (radio/checkbox) del navegador: sin esto, siguen viéndose
+   con apariencia clara (círculo blanco) aunque el resto de la pantalla esté oscura. */
+:root {
+  color-scheme: light;
+}
+:root.dark {
+  color-scheme: dark;
+}
+
+/* ---------- Avatar Frand ---------- */
+:root {
+  --ease-out-fuerte: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.avatar-boton {
+  transition: transform 160ms var(--ease-out-fuerte);
+}
+.avatar-boton:active {
+  transform: scale(0.96);
+}
+
+/* El anillo de progreso avanza al ritmo de timeupdate (~4 veces/s); la transición lineal lo suaviza. */
+.avatar-anillo {
+  transition: stroke-dashoffset 250ms linear;
+}
+
+/* Mientras habla, Frand "respira" levemente: indica estado sin distraer de la lectura. */
+.avatar-cara {
+  transform-origin: 50% 90%;
+}
+.avatar-cara[data-hablando='true'] {
+  animation: avatar-hablar 640ms ease-in-out infinite alternate;
+}
+@keyframes avatar-hablar {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-1.5px) scale(1.025); }
+}
+
+.avatar-ondas span {
+  width: 3px;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--color-rose-400);
+  transform-origin: bottom;
+  animation: avatar-onda 900ms ease-in-out infinite;
+}
+.avatar-ondas span:nth-child(2) { animation-delay: -200ms; }
+.avatar-ondas span:nth-child(3) { animation-delay: -450ms; }
+.avatar-ondas span:nth-child(4) { animation-delay: -650ms; }
+@keyframes avatar-onda {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+/* Portada: entrada escalonada, solo se ve una vez por sesión. */
+.entrada {
+  animation: entrada-subir 560ms var(--ease-out-fuerte) both;
+}
+@keyframes entrada-subir {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-cara[data-hablando='true'],
+  .avatar-ondas span {
+    animation: none;
+  }
+  .avatar-ondas span { transform: scaleY(0.6); }
+  .entrada {
+    animation-name: entrada-aparecer;
+  }
+  @keyframes entrada-aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+/* ---------- Barra superior ---------- */
+.barra-progreso {
+  transform-origin: left;
+  transition: transform 300ms var(--ease-out-fuerte);
+}
+
+/* Menú desplegable: entra en 180 ms y sale más rápido (120 ms); escala desde su botón (arriba a la derecha). */
+.menu-panel {
+  transform-origin: top right;
+  transition:
+    opacity 120ms ease-out,
+    transform 120ms ease-out,
+    visibility 0s linear 120ms;
+}
+.menu-panel[data-abierto='false'] {
+  opacity: 0;
+  transform: scale(0.97) translateY(-4px);
+  visibility: hidden;
+  pointer-events: none;
+}
+.menu-panel[data-abierto='true'] {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition:
+    opacity 180ms var(--ease-out-fuerte),
+    transform 180ms var(--ease-out-fuerte),
+    visibility 0s;
+}
+.menu-flecha {
+  transition: transform 180ms var(--ease-out-fuerte);
+}
+.menu-flecha[data-abierto='true'] {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-panel[data-abierto='false'] { transform: none; }
+  .barra-progreso { transition: none; }
+}
