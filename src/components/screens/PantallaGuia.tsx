@@ -4,6 +4,8 @@ import AvatarAudioPlayer from '../AvatarAudioPlayer';
 import Actividad from '../Actividad';
 import FlowDiagram from '../FlowDiagram';
 import MicroVideo from '../MicroVideo';
+import { avisarTerminosHuerfanos, renderizarConTerminos } from '../TextoConInfo';
+import type { TerminoGlosario } from '../../lib/casos-uso';
 
 function BloqueComando({ comando }: { comando: string }) {
   const [copiado, setCopiado] = useState(false);
@@ -33,7 +35,7 @@ function BloqueComando({ comando }: { comando: string }) {
   );
 }
 
-function ListaPasos({ pasos }: { pasos: PasoGuia[] }) {
+function ListaPasos({ pasos, terminos, usados }: { pasos: PasoGuia[]; terminos?: TerminoGlosario[]; usados: Set<string> }) {
   return (
     <ol className="space-y-4">
       {pasos.map((paso, i) => (
@@ -41,7 +43,7 @@ function ListaPasos({ pasos }: { pasos: PasoGuia[] }) {
           <span className="grid size-7 shrink-0 place-items-center rounded-full bg-rose-100 text-sm font-semibold text-rose-700 dark:bg-rose-950 dark:text-rose-200">{i + 1}</span>
           <div className="min-w-0 flex-1">
             <p className="font-semibold text-slate-900 dark:text-slate-100">{paso.titulo}</p>
-            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{paso.detalle}</p>
+            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{renderizarConTerminos(paso.detalle, terminos, usados)}</p>
             {paso.comando && <BloqueComando comando={paso.comando} />}
           </div>
         </li>
@@ -51,6 +53,7 @@ function ListaPasos({ pasos }: { pasos: PasoGuia[] }) {
 }
 
 export default function PantallaGuia({ guia }: { guia: GuiaInstalacion }) {
+  const usados = new Set<string>();
   const [opcionId, setOpcionId] = useState(guia.opciones[guia.opciones.length - 1].id);
   const opcion = guia.opciones.find((o) => o.id === opcionId) ?? guia.opciones[0];
 
@@ -59,7 +62,7 @@ export default function PantallaGuia({ guia }: { guia: GuiaInstalacion }) {
       <div>
         <span className="text-sm font-medium uppercase tracking-wide text-slate-400">Práctica guiada</span>
         <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">{guia.titulo}</h1>
-        <p className="mt-2 text-slate-600 dark:text-slate-300">{guia.proposito}</p>
+        <p className="mt-2 text-slate-600 dark:text-slate-300">{renderizarConTerminos(guia.proposito, guia.terminos, usados)}</p>
       </div>
 
       <AvatarAudioPlayer guion={guia.guionAvatar} />
@@ -106,7 +109,7 @@ export default function PantallaGuia({ guia }: { guia: GuiaInstalacion }) {
               </ul>
             </div>
           </div>
-          <ListaPasos pasos={opcion.pasos} />
+          <ListaPasos pasos={opcion.pasos} terminos={guia.terminos} usados={usados} />
         </div>
       </div>
 
@@ -118,12 +121,12 @@ export default function PantallaGuia({ guia }: { guia: GuiaInstalacion }) {
         <div className="mb-5">
           <FlowDiagram flujo={guia.primerFlujo.flujo} altura={200} />
         </div>
-        <ListaPasos pasos={guia.primerFlujo.pasos} />
+        <ListaPasos pasos={guia.primerFlujo.pasos} terminos={guia.terminos} usados={usados} />
       </div>
 
       <p className="rounded-xl bg-amber-50 p-4 text-sm text-amber-900 ring-1 ring-amber-200 dark:bg-amber-950 dark:text-amber-100 dark:ring-amber-900">
         <strong>Importante: </strong>
-        {guia.aviso}
+        {renderizarConTerminos(guia.aviso, guia.terminos, usados)}
       </p>
 
       <div>

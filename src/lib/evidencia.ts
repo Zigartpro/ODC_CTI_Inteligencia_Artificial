@@ -1,4 +1,4 @@
-import type { Actividad, GuionAvatar } from './casos-uso';
+import type { Actividad, GuionAvatar, TerminoGlosario } from './casos-uso';
 
 export interface HallazgoEvidencia {
   texto: string;
@@ -12,4 +12,5 @@ export interface Evidencia {
   cierre: string;
   actividad: Actividad;
   guionAvatar: GuionAvatar;
+  terminos?: TerminoGlosario[];
 }

@@ -4,7 +4,7 @@ export const modulo8Evidencia: Evidencia = {
   id: 'modulo-8-evidencia',
   titulo: 'Qué dice la evidencia científica sobre la IA en las pymes',
   introduccion:
-    'Este ODC no se inventó los beneficios de automatizar procesos con IA: se basa en una revisión sistemática con metodología PRISMA (ver el diagrama en la pantalla de Referencias) que incluyó 30 estudios científicos sobre pymes de distintos países que han adoptado inteligencia artificial en áreas como marketing, manufactura, logística, contabilidad, atención al cliente y gestión del talento humano. Aquí tienes un resumen honesto de lo que esa evidencia realmente muestra: lo bueno, y también las dificultades reales que otros negocios han enfrentado.',
+    'Este ODC no se inventó los beneficios de automatizar procesos con IA: se basa en una revisión sistemática con metodología PRISMA (Page et al., 2021; ver el diagrama en la pantalla de Referencias) que incluyó 30 estudios científicos sobre pymes de distintos países que han adoptado inteligencia artificial en áreas como marketing, manufactura, logística, contabilidad, atención al cliente y gestión del talento humano. Aquí tienes un resumen honesto de lo que esa evidencia realmente muestra: lo bueno, y también las dificultades reales que otros negocios han enfrentado.',
   hallazgos: [
     {
       texto:
@@ -50,6 +50,25 @@ export const modulo8Evidencia: Evidencia = {
       },
     ],
   },
+  terminos: [
+    {
+      termino: 'revisión sistemática',
+      definicion: 'Método de investigación que busca, selecciona y sintetiza de forma ordenada y reproducible los estudios publicados sobre una pregunta específica.',
+    },
+    {
+      termino: 'PRISMA',
+      definicion: 'Guía internacional para reportar revisiones sistemáticas: define las etapas de identificación, cribado e inclusión de estudios y se resume en un diagrama de flujo.',
+      enlace: { texto: 'Page et al. (2021): The PRISMA 2020 statement', url: 'https://doi.org/10.1136/bmj.n71' },
+    },
+    {
+      termino: 'inercia organizacional',
+      definicion: 'Tendencia de una organización a seguir haciendo las cosas como siempre, lo que frena los cambios, incluida la adopción de tecnología.',
+    },
+    {
+      termino: 'colaboración humano-IA',
+      definicion: 'Enfoque en el que la IA apoya el trabajo de las personas (por ejemplo, en tareas repetitivas) y la decisión final sigue siendo humana.',
+    },
+  ],
   guionAvatar: {
     texto:
       'Todo lo que has visto en los módulos anteriores no es una promesa vacía: está respaldado por una revisión de 30 estudios científicos sobre pymes que ya están usando inteligencia artificial en el mundo real. En esta pantalla vas a ver un resumen honesto de esa evidencia, los beneficios reales, pero también las dificultades que otros negocios han enfrentado. Lo más importante que vas a encontrar es esto: la principal barrera no es la tecnología en sí, es el acceso a conocimiento claro sobre cómo empezar. Y ese es exactamente el problema que este ODC busca resolver contigo. Cuando termines de leer, responde la actividad y sigue a la evaluación final.',

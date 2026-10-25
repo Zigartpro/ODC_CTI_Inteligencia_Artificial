@@ -90,6 +90,14 @@ export type Actividad =
   | ActividadClasificar
   | ActividadCompletar;
 
+/** Pop-up "+info": definición, dato o enlace a una norma, ley o artículo (instructivo, ítem H). */
+export interface TerminoGlosario {
+  /** Texto exacto que se resalta en el contenido (se busca sin distinguir mayúsculas). */
+  termino: string;
+  definicion: string;
+  enlace?: { texto: string; url: string };
+}
+
 export interface GuionAvatar {
   texto: string;
   duracionEstimadaSegundos: number;
@@ -121,6 +129,7 @@ export interface CasoUso {
   actividad: Actividad;
   guionAvatar: GuionAvatar;
   video?: MicroVideo;
+  terminos?: TerminoGlosario[];
   /** Estudio(s) de la revisión sistemática que respaldan este caso, en formato de cita APA. */
   respaldoEvidencia?: string;
 }

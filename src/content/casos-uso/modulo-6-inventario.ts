@@ -52,6 +52,20 @@ export const modulo6Inventario: CasoUso = {
   },
   respaldoEvidencia:
     'En un estudio con 400 pymes, la automatización logística y los sistemas de apoyo a la decisión con IA se relacionaron con una mayor eficiencia operativa (Inmor et al., 2025), y las pymes manufactureras muestran un fuerte interés en usar IA para optimizar sus recursos (Chiarini et al., 2026).',
+  terminos: [
+    {
+      termino: 'referencias',
+      definicion: 'En inventario, cada producto distinto que se maneja (por ejemplo, una camisa en talla M es una referencia).',
+    },
+    {
+      termino: 'stock',
+      definicion: 'Existencias: cantidad de unidades de un producto disponibles para vender.',
+    },
+    {
+      termino: 'cantidad mínima',
+      definicion: 'Nivel de existencias por debajo del cual conviene reponer el producto (punto de reorden). Se define para cada producto.',
+    },
+  ],
   guionAvatar: {
     texto:
       '¿Alguna vez un cliente te ha preguntado por un producto que ya se te acabó sin que lo notaras? Esta pantalla te muestra un flujo que revisa tu inventario por ti y te avisa a tiempo. Léelo y luego responde la pregunta de selección múltiple. La idea clave es que el flujo no te satura de avisos repetidos: te notifica una vez por producto y espera hasta que lo repongas para volver a avisarte si vuelve a bajar. Sigamos con el siguiente caso: cómo automatizar la bienvenida a un nuevo empleado.',

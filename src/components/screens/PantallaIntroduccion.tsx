@@ -3,14 +3,19 @@ import AvatarAudioPlayer from '../AvatarAudioPlayer';
 import Actividad from '../Actividad';
 import Infografia from '../Infografia';
 import MicroVideo from '../MicroVideo';
+import { avisarTerminosHuerfanos, renderizarConTerminos } from '../TextoConInfo';
 
 export default function PantallaIntroduccion({ pantalla }: { pantalla: PantallaTexto }) {
+  const usados = new Set<string>();
+  const bloques = pantalla.microcontenido.map((bloque) => renderizarConTerminos(bloque, pantalla.terminos, usados));
+  avisarTerminosHuerfanos(pantalla.terminos, usados);
+
   return (
     <section className="mx-auto max-w-3xl space-y-6 p-6">
       <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">{pantalla.titulo}</h1>
       <AvatarAudioPlayer guion={pantalla.guionAvatar} />
       {pantalla.infografia && <Infografia titulo={pantalla.infografia.titulo} datos={pantalla.infografia.datos} />}
-      {pantalla.microcontenido.map((bloque, indice) => (
+      {bloques.map((bloque, indice) => (
         <p key={indice} className="leading-relaxed text-slate-700 dark:text-slate-300">
           {bloque}
         </p>

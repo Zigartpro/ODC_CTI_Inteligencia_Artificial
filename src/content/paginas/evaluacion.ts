@@ -14,8 +14,8 @@ export const evaluacionFinal: EvaluacionFinal = {
         'Según las cifras del módulo de introducción, ¿cuál es la principal razón por la que las pymes colombianas no han adoptado más la automatización con IA?',
       opciones: [
         { texto: 'Falta de interés de los dueños de los negocios.', correcta: false },
-        { texto: 'Falta de acceso a conocimiento claro y aplicable sobre cómo empezar.', correcta: true },
         { texto: 'Está prohibido por ley en Colombia.', correcta: false },
+        { texto: 'Falta de acceso a conocimiento claro y aplicable sobre cómo empezar.', correcta: true },
       ],
       retroalimentacion:
         'El interés existe: el 52% de las pymes ya tiene a alguien a cargo de la tecnología (CIPE, 2024), pero solo el 30% automatiza procesos (iNNpulsa Colombia, 2024). Lo que falta es conocimiento claro y aplicable sobre cómo empezar, justo lo que este ODC busca resolver.',
@@ -24,10 +24,10 @@ export const evaluacionFinal: EvaluacionFinal = {
       id: 'p2-que-es-n8n',
       repasoPantallaId: 'modulo-2-que-es-n8n',
       tipo: 'verdadero-falso',
-      enunciado: 'n8n es una herramienta "low-code", lo que significa que necesitas saber programación avanzada para usarla.',
-      esVerdadero: false,
+      enunciado: 'n8n es una herramienta "low-code": permite construir flujos conectando nodos de forma visual, sin necesidad de programación avanzada.',
+      esVerdadero: true,
       retroalimentacion:
-        '"Low-code" significa justo lo contrario: puedes construir flujos completos arrastrando y conectando nodos visualmente, sin necesitar programación avanzada (aunque permite código para quien quiera personalizar más).',
+        'Correcto. "Low-code" significa que los flujos se construyen de forma visual, arrastrando y conectando nodos; la programación es opcional y sirve para quien quiera personalizar más.',
     },
     {
       id: 'p-instalacion',
@@ -44,8 +44,8 @@ export const evaluacionFinal: EvaluacionFinal = {
       tipo: 'seleccion-multiple',
       pregunta: 'En el flujo de atención al cliente por WhatsApp, ¿qué nodo decide si el asistente de IA responde solo o si avisa al dueño del negocio?',
       opciones: [
-        { texto: 'El nodo WhatsApp Trigger (que recibe el mensaje).', correcta: false },
         { texto: 'El nodo IF, que evalúa si la IA puede resolverlo sola.', correcta: true },
+        { texto: 'El nodo WhatsApp Trigger (que recibe el mensaje).', correcta: false },
         { texto: 'El nodo AI Agent, porque genera la respuesta.', correcta: false },
       ],
       retroalimentacion:
@@ -77,10 +77,10 @@ export const evaluacionFinal: EvaluacionFinal = {
       id: 'p6-inventario',
       repasoPantallaId: 'modulo-6-inventario',
       tipo: 'verdadero-falso',
-      enunciado: 'El flujo de inventario te vuelve a notificar todos los días sobre el mismo producto con stock bajo, aunque ya te haya avisado antes.',
-      esVerdadero: false,
+      enunciado: 'El flujo de inventario guarda un registro de los productos que ya avisó, para no repetir la misma alerta cada día mientras no se repongan.',
+      esVerdadero: true,
       retroalimentacion:
-        'El flujo guarda un registro de qué productos ya notificó, precisamente para no repetir la misma alerta cada día mientras no repongas el producto.',
+        'Correcto. Ese registro evita recibir el mismo aviso todos los días; si el producto se repone y luego vuelve a bajar del mínimo, el flujo avisará de nuevo.',
     },
     {
       id: 'p7-rrhh',
@@ -89,8 +89,8 @@ export const evaluacionFinal: EvaluacionFinal = {
       pregunta: '¿Qué es lo que inicia (dispara) el flujo de bienvenida a un nuevo empleado en el caso de recursos humanos?',
       opciones: [
         { texto: 'Que el nuevo empleado escriba por WhatsApp.', correcta: false },
-        { texto: 'Que alguien del equipo llene un formulario con los datos del nuevo empleado.', correcta: true },
         { texto: 'Que pasen 24 horas desde la fecha de contratación.', correcta: false },
+        { texto: 'Que alguien del equipo llene un formulario con los datos del nuevo empleado.', correcta: true },
       ],
       retroalimentacion:
         'Todo el proceso automático (guardar registro, avisar al equipo, enviar bienvenida) arranca cuando alguien llena ese formulario inicial: es el disparador de todo el flujo.',
@@ -101,8 +101,8 @@ export const evaluacionFinal: EvaluacionFinal = {
       tipo: 'seleccion-multiple',
       pregunta: 'Según la revisión de los 30 estudios científicos presentada en el módulo de evidencia científica, ¿cuál es el patrón más consistente sobre cómo la IA afecta el trabajo en las pymes?',
       opciones: [
-        { texto: 'La IA reemplaza por completo el trabajo humano en la mayoría de los casos.', correcta: false },
         { texto: 'La colaboración humano-IA, no la sustitución, es el patrón que más se repite en los casos exitosos.', correcta: true },
+        { texto: 'La IA reemplaza por completo el trabajo humano en la mayoría de los casos.', correcta: false },
         { texto: 'La evidencia no muestra ningún impacto medible de la IA en pymes.', correcta: false },
       ],
       retroalimentacion:

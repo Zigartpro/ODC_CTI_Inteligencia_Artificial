@@ -102,3 +102,11 @@ La primera subida a SCORM Cloud falló: pantalla en blanco, consola con 404 en t
 - **Evidencia en cada caso:** sección «Qué dice la evidencia» citando estudios de la matriz (Ridho 2023, Ortolano y Gallegos 2026, Zeng et al. 2022, Susanto et al. 2025, Kortesalmi 2025, Polasik et al. 2026, Inmor et al. 2025, Chiarini et al. 2026, Arias Montoya et al. 2026).
 - **Referencias:** 33 (20 artículos de la matriz con DOI tomado del export de Scopus, cursivas APA 7, videos, n8n, ElevenLabs, iNNpulsa 2024). Todas citadas en alguna pantalla. **Diagrama PRISMA** (64 → 34 excluidos → 30 incluidos) al inicio de la pantalla de Referencias.
 - **Módulo 1:** infografía de 4 cifras; ahora cita Ley 590/2000 y Decreto 1074/2015; cifra del 30% de automatización verificada en iNNpulsa (2024, encuesta a 4.107 mipymes).
+
+## Ajustes por la retroalimentación de la profesora (2026-10-25)
+
+- **Pop-ups «+info» en todos los módulos** (instructivo, ítem H; punto 5 de la profesora): infraestructura compartida en `components/TextoConInfo.tsx` y `TerminoInfo.tsx` (cierra con Esc o clic fuera, admite enlace a norma/artículo). Términos por pantalla en el campo `terminos` de cada archivo de contenido: M1 (Ley 590, Decreto 1074 con enlace, mipymes, CIPE, iNNpulsa, automatización de procesos), M3 (Docker Desktop, WSL 2, credenciales), M4-M8 (3 cada uno), M9 (revisión sistemática, PRISMA con enlace a Page et al. 2021, inercia organizacional, colaboración humano-IA). Si un término deja de aparecer en el texto, no se muestra y en desarrollo avisa por consola.
+- **Reenfoque a estudiantes de posgrado (puntos 1-2):** REA con «el estudiante», población objetivo, portada. **Pendiente:** módulos 1-9, guiones y título, a la espera de los textos finales del storyboard.
+- **Créditos (punto 6):** sin campos «[completar]»; imagen de Frand citada a Meta AI; roles completos (edición, imágenes, sonidos); TASL de infografía y PRISMA como elaboración propia. Las licencias de Meta AI y ElevenLabs se remiten a sus términos de uso (los autores deben verificarlos).
+- **Referencias:** 35 (se agregaron la imagen de Frand —Meta AI— y Page et al., 2021, PRISMA 2020).
+- **Evaluación:** la opción correcta de las preguntas de selección múltiple ya no es siempre la «b» (c, a, b, c, a) y dos de las cuatro de V/F pasan a ser «Verdadero» (preguntas 2 y 7; enunciados actualizados).

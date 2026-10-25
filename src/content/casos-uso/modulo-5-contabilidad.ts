@@ -43,6 +43,20 @@ export const modulo5Contabilidad: CasoUso = {
   },
   respaldoEvidencia:
     'Kortesalmi (2025) propone, para firmas contables pequeñas, un modelo de madurez digital que les permite evaluar su nivel actual y trazar una ruta hacia una automatización más sofisticada. En pymes que ya usan IA, los efectos más fuertes se observan en la reducción de la carga de trabajo y la eficiencia de tiempo (Polasik et al., 2026).',
+  terminos: [
+    {
+      termino: 'PDF',
+      definicion: 'Portable Document Format: formato de archivo para documentos. Si el PDF es una imagen escaneada, además se necesita reconocimiento óptico de caracteres (OCR) para extraer el texto.',
+    },
+    {
+      termino: 'asistente de inteligencia artificial',
+      definicion: 'Modelo de lenguaje (LLM) que recibe el texto del documento y devuelve los datos pedidos (proveedor, valor, fecha) de forma ordenada.',
+    },
+    {
+      termino: 'software contable',
+      definicion: 'Programa para llevar la contabilidad de una empresa (ingresos, gastos, facturas). n8n puede conectarse a varios mediante sus nodos o su API.',
+    },
+  ],
   guionAvatar: {
     texto:
       '¿Cuánto tiempo pasas cada semana copiando datos de facturas a una hoja de cálculo? En esta pantalla vas a ordenar los pasos de un flujo que hace esa transcripción por ti. Arrastra cada paso al orden correcto. Este flujo no decide nada por ti, solo lee y organiza: tú sigues revisando y aprobando cada factura antes de pagar, pero ya no tienes que digitarla desde cero. Con estos tres casos ya tienes una idea clara de cómo n8n puede aliviar tareas repetitivas en distintas áreas de tu negocio.',

@@ -39,6 +39,20 @@ export const modulo7Rrhh: CasoUso = {
   },
   respaldoEvidencia:
     'Arias Montoya et al. (2026) encontraron que muchas micro y pequeñas empresas carecen de sistemas estructurados de gestión del talento humano que acompañen la adopción de IA, y que la IA fortalece esa gestión solo cuando se desarrollan las capacidades organizacionales adecuadas.',
+  terminos: [
+    {
+      termino: 'papeleo',
+      definicion: 'Trámites administrativos de ingreso de una persona: registrar sus datos, darle accesos y enviarle la información de bienvenida.',
+    },
+    {
+      termino: 'formulario sencillo',
+      definicion: 'En este flujo es el disparador: al enviarse, n8n inicia el proceso (por ejemplo, con un formulario de Google Forms).',
+    },
+    {
+      termino: 'canal de comunicación del equipo',
+      definicion: 'Espacio de mensajería compartido por el equipo, como Slack o Microsoft Teams. n8n puede enviar mensajes a un canal.',
+    },
+  ],
   guionAvatar: {
     texto:
       '¿Se te ha olvidado avisarle al equipo que llega alguien nuevo, o que el nuevo empleado se quede sin la información básica su primer día? Esta pantalla te muestra un flujo que se encarga de ese proceso de bienvenida por ti. Revísalo y responde la actividad de verdadero o falso. La idea clave es que tú solo llenas un formulario una vez, y el flujo hace el resto: guarda el registro, avisa al equipo y le da la bienvenida al nuevo empleado, todo sin que nadie tenga que acordarse de hacerlo paso por paso. Ya con estos seis casos conociste ejemplos de automatización en distintas áreas de un negocio ahora vamos a ver qué dice la evidencia científica sobre todo esto.',

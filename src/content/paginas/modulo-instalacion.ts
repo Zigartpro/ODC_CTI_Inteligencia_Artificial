@@ -103,6 +103,21 @@ export const moduloInstalacion: GuiaInstalacion = {
     ],
     retroalimentacionFinal: 'Con ese comando n8n queda corriendo en tu equipo, y con esa dirección abres el editor para empezar a crear flujos.',
   },
+  terminos: [
+    {
+      termino: 'Docker Desktop',
+      definicion: 'Aplicación que permite ejecutar programas "empaquetados" (contenedores) en tu computador. Es de uso gratuito para fines personales y educativos.',
+      enlace: { texto: 'Página de Docker Desktop', url: 'https://www.docker.com/products/docker-desktop/' },
+    },
+    {
+      termino: 'WSL 2',
+      definicion: 'Subsistema de Windows para Linux: función de Windows que permite ejecutar herramientas de Linux. Docker Desktop la usa en muchos equipos con Windows.',
+    },
+    {
+      termino: 'credenciales',
+      definicion: 'Datos de acceso (usuario, contraseña o claves) que una aplicación te pide para conectarse a otra, como Gmail o WhatsApp.',
+    },
+  ],
   guionAvatar: {
     texto:
       'Llegó el momento de pasar de la teoría a la práctica. En esta pantalla tienes dos caminos para empezar a usar n8n: la versión en la nube, que no requiere instalar nada, o la versión gratuita en tu propio computador con un programa llamado Docker. Sigue los pasos con calma: puedes copiar cada comando con un solo clic y, si prefieres verlo, abajo hay un microvideo con el proceso. Luego vas a crear tu primer flujo, un botón que genera un mensaje, para que veas cómo viaja la información de un nodo a otro. Al final, completa el comando de la actividad. En el siguiente módulo empiezan los casos de negocio.',

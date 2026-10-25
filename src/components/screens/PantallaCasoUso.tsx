@@ -3,6 +3,7 @@ import FlowDiagram from '../FlowDiagram';
 import Actividad from '../Actividad';
 import AvatarAudioPlayer from '../AvatarAudioPlayer';
 import MicroVideo from '../MicroVideo';
+import { avisarTerminosHuerfanos, renderizarConTerminos } from '../TextoConInfo';
 
 const COLOR_DIFICULTAD: Record<CasoUso['nivelDificultad'], string> = {
   Básico: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100',
@@ -11,6 +12,11 @@ const COLOR_DIFICULTAD: Record<CasoUso['nivelDificultad'], string> = {
 };
 
 export default function PantallaCasoUso({ caso }: { caso: CasoUso }) {
+  const usados = new Set<string>();
+  const problema = renderizarConTerminos(caso.problema, caso.terminos, usados);
+  const bloques = caso.microcontenido.map((bloque) => renderizarConTerminos(bloque, caso.terminos, usados));
+  avisarTerminosHuerfanos(caso.terminos, usados);
+
   return (
     <section className="mx-auto max-w-3xl space-y-6 p-6">
       <div>
@@ -25,10 +31,10 @@ export default function PantallaCasoUso({ caso }: { caso: CasoUso }) {
 
       <div>
         <h2 className="mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">El problema</h2>
-        <p className="text-slate-700 dark:text-slate-300">{caso.problema}</p>
+        <p className="text-slate-700 dark:text-slate-300">{problema}</p>
       </div>
 
-      {caso.microcontenido.map((bloque, indice) => (
+      {bloques.map((bloque, indice) => (
         <p key={indice} className="leading-relaxed text-slate-700 dark:text-slate-300">
           {bloque}
         </p>

@@ -30,7 +30,7 @@ export default function PantallaPortada({ onIniciar }: Props) {
             Automatiza los procesos de tu pyme con inteligencia artificial
           </h1>
           <p className="max-w-xl text-lg text-pretty text-slate-600 dark:text-slate-300">
-            Aprende con casos prácticos, y sin saber programar, cómo los flujos de trabajo con IA en n8n pueden encargarse de las tareas repetitivas de tu negocio.
+            Aprende con casos de uso guiados, y sin saber programar, cómo los flujos de trabajo con IA en n8n automatizan las tareas repetitivas de una organización.
           </p>
         </div>
 

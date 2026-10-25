@@ -60,6 +60,20 @@ export const modulo3AtencionCliente: CasoUso = {
     fin: 720,
     descripcion: 'Demostración de un asistente de IA, orquestado con n8n, respondiendo mensajes de clientes en tiempo real (en el video se usa además la plataforma Superchat).',
   },
+  terminos: [
+    {
+      termino: 'asistente de inteligencia artificial',
+      definicion: 'Programa que conversa en lenguaje natural. Funciona con un modelo de lenguaje de gran tamaño (LLM): un tipo de red neuronal de aprendizaje profundo (deep learning) entrenada con enormes cantidades de texto.',
+    },
+    {
+      termino: 'preguntas frecuentes',
+      definicion: 'Preguntas que los clientes repiten una y otra vez (horarios, precios, ubicación). Por ser repetitivas, son las primeras candidatas a automatizar.',
+    },
+    {
+      termino: 'ChatGPT',
+      definicion: 'Asistente conversacional de OpenAI basado en un modelo de lenguaje de gran tamaño (LLM). El nodo AI Agent de n8n puede conectarse a modelos de este tipo.',
+    },
+  ],
   guionAvatar: {
     texto:
       'Imagina que tu negocio pudiera responder WhatsApp las 24 horas, sin que tú tengas que estar pegado al celular. En esta pantalla vas a ver cómo un flujo de automatización conecta tu WhatsApp con un asistente de inteligencia artificial. Léelo con calma y luego resuelve la actividad para comprobar que entendiste cómo decide cuándo responder solo y cuándo avisarte a ti. Lo importante no es que la IA reemplace tu atención al cliente, sino que se encargue de las preguntas repetitivas horario, precio, disponibilidad para que tú te concentres en las conversaciones que sí necesitan tu criterio, como un reclamo o una negociación. Cuando termines la actividad, sigue al siguiente caso: cómo automatizar el seguimiento de tus clientes potenciales en marketing.',

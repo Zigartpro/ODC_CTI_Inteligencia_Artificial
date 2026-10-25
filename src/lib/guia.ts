@@ -1,4 +1,4 @@
-import type { Actividad, CasoUso, GuionAvatar, MicroVideo } from './casos-uso';
+import type { Actividad, CasoUso, GuionAvatar, MicroVideo, TerminoGlosario } from './casos-uso';
 
 export interface PasoGuia {
   titulo: string;
@@ -26,4 +26,5 @@ export interface GuiaInstalacion {
   video?: MicroVideo;
   actividad: Actividad;
   guionAvatar: GuionAvatar;
+  terminos?: TerminoGlosario[];
 }

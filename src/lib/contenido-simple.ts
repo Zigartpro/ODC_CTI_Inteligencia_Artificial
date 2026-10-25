@@ -1,4 +1,6 @@
-import type { Actividad, GuionAvatar, MicroVideo } from './casos-uso';
+import type { Actividad, GuionAvatar, MicroVideo, TerminoGlosario } from './casos-uso';
+
+export type { TerminoGlosario };
 
 export interface DatoInfografia {
   valor: string;
@@ -15,11 +17,7 @@ export interface PantallaTexto {
   infografia?: { titulo: string; datos: DatoInfografia[] };
   video?: MicroVideo;
   actividad?: Actividad;
-}
-
-export interface TerminoGlosario {
-  termino: string;
-  definicion: string;
+  terminos?: TerminoGlosario[];
 }
 
 export interface PantallaConceptos extends PantallaTexto {

@@ -40,6 +40,20 @@ export const modulo4Marketing: CasoUso = {
   },
   respaldoEvidencia:
     'Zeng et al. (2022) encontraron que las pymes que optimizan su contenido en redes sociales con apoyo de IA logran más visibilidad que con contenido genérico, y Susanto et al. (2025) muestran que el análisis automático de los comentarios de los clientes es viable para pymes con recursos limitados.',
+  terminos: [
+    {
+      termino: 'leads',
+      definicion: 'Contactos de posibles clientes que mostraron interés (llenaron un formulario, escribieron o dejaron su correo) pero todavía no han comprado.',
+    },
+    {
+      termino: 'Google Sheets',
+      definicion: 'Hoja de cálculo en línea de Google. n8n puede leerla y escribir en ella con su nodo de Google Sheets.',
+    },
+    {
+      termino: 'plantilla',
+      definicion: 'Mensaje base reutilizable, con campos variables (nombre, servicio) que el flujo completa para cada contacto.',
+    },
+  ],
   guionAvatar: {
     texto:
       '¿Cuántos clientes potenciales se te han enfriado porque se te olvidó escribirles a tiempo? Esta pantalla te muestra un flujo que hace ese seguimiento por ti. Revísalo y luego responde la actividad de verdadero o falso. La clave de este flujo no es la velocidad, es la constancia: se ejecuta todos los días sin falta, revisa quién no ha sido contactado y le escribe, así tú nunca dependes de acordarte. Ahora sigamos con el tercer caso: cómo automatizar el papeleo de tus facturas.',

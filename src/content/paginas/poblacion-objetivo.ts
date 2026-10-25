@@ -2,15 +2,15 @@ import type { PantallaTexto } from '../../lib/contenido-simple';
 
 export const paginaPoblacionObjetivo: PantallaTexto = {
   id: 'poblacion-objetivo',
-  titulo: '¿Este curso es para ti?',
+  titulo: '¿A quién va dirigido este ODC?',
   microcontenido: [
-    'Este ODC está pensado para dueños y gerentes de pequeñas empresas y emprendimientos en Colombia, sin conocimiento técnico previo en programación ni en automatización.',
-    'Todo el contenido evita la jerga técnica innecesaria y explica cada idea en términos de negocio: qué problema resuelve una automatización, no cómo funciona por dentro. Si quieres evaluar si vale la pena invertir tiempo en aprender esto para tu negocio, este curso es para ti.',
+    'Este ODC está dirigido a estudiantes de posgrado de la Universidad de Cundinamarca que no cuentan con conocimientos previos de programación ni de automatización de procesos, y que desean aplicar la inteligencia artificial en el contexto de organizaciones y emprendimientos.',
+    'El contenido evita la jerga técnica innecesaria: cada concepto se presenta a partir de una situación de una organización, explicando primero qué problema resuelve una automatización y después cómo se construye. Los casos de uso funcionan como escenarios de práctica que puedes adaptar a tu campo de estudio o a tu ejercicio profesional.',
   ],
   guionAvatar: {
     texto:
-      'Este curso es para ti si eres dueño o gerente de una pequeña empresa o un emprendimiento, sin necesidad de saber programar ni de tener experiencia previa en automatización. Todo está explicado en términos de negocio, sin tecnicismos innecesarios.',
-    duracionEstimadaSegundos: 24,
+      'Este ODC está dirigido a estudiantes de posgrado de la Universidad de Cundinamarca. No necesitas experiencia previa en programación ni en automatización: los conceptos se explican a partir de situaciones reales de una organización. Los casos que verás son escenarios de práctica que puedes adaptar a tu campo de estudio o a tu ejercicio profesional.',
+    duracionEstimadaSegundos: 26,
     archivoAudio: '03-poblacion-objetivo.mp3',
   },
 };

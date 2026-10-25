@@ -60,6 +60,36 @@ export const modulo1Introduccion: PantallaTexto = {
       },
     ],
   },
+  terminos: [
+    {
+      termino: 'Ley 590 de 2000',
+      definicion: 'Ley colombiana que establece medidas para promover el desarrollo de las micro, pequeñas y medianas empresas (mipymes).',
+      enlace: { texto: 'Consultar la norma', url: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=12672' },
+    },
+    {
+      termino: 'Decreto 1074 de 2015',
+      definicion: 'Decreto Único Reglamentario del Sector Comercio, Industria y Turismo: reúne las normas reglamentarias del sector, incluidas las que se usan para clasificar el tamaño de una empresa.',
+      enlace: { texto: 'Consultar la norma', url: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=76608' },
+    },
+    {
+      termino: 'mipymes',
+      definicion: 'Sigla de micro, pequeñas y medianas empresas. En Colombia su tamaño se clasifica según los ingresos anuales y el sector económico en el que operan.',
+    },
+    {
+      termino: 'CIPE',
+      definicion: 'Center for International Private Enterprise: organización sin ánimo de lucro que promueve el desarrollo de la empresa privada. Auspició la encuesta sobre mipymes colombianas que se cita en este módulo.',
+      enlace: { texto: 'Sitio de CIPE', url: 'https://www.cipe.org' },
+    },
+    {
+      termino: 'iNNpulsa',
+      definicion: 'iNNpulsa Colombia es la agencia del Gobierno de Colombia que impulsa el emprendimiento y la innovación empresarial.',
+      enlace: { texto: 'Sitio de iNNpulsa Colombia', url: 'https://www.innpulsacolombia.com' },
+    },
+    {
+      termino: 'automatización de procesos',
+      definicion: 'Uso de software para ejecutar tareas repetitivas siguiendo reglas definidas, sin intervenir manualmente cada vez que ocurren.',
+    },
+  ],
   guionAvatar: {
     texto:
       'Las micro y pequeñas empresas son casi todo el tejido empresarial de Colombia, pero muy pocas han dado el salto hacia la automatización con inteligencia artificial. En esta pantalla vas a ver por qué pasa esto, con cifras reales de estudios recientes sobre pymes colombianas. Presta atención a la idea principal: el problema no es falta de interés de los empresarios, es falta de acceso a conocimiento claro y aplicable. Ese es exactamente el vacío que este curso busca llenar. Al final, pon a prueba tu memoria con el reto de las cifras y luego sigue al siguiente módulo para conocer la herramienta que vamos a usar.',
